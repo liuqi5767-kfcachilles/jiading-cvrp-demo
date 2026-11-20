@@ -1,0 +1,58 @@
+{
+  "version": 2,
+  "selected_config_id": "k8_c3_t0.2",
+  "enhanced_config": {
+    "neighbor_count": 8,
+    "cycles": 3,
+    "temperature_scale": 0.2,
+    "initial_descent_fraction": 0.2,
+    "final_descent_fraction": 0.2,
+    "use_nearby": true,
+    "use_tail_exchange": true,
+    "use_descent": true
+  },
+  "selection_data_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "selection_algorithm_seeds": [
+    0,
+    1,
+    2
+  ],
+  "selection_budget": 8000,
+  "selection_instances": 15,
+  "development_runs": 405,
+  "basic_by_size": {
+    "20": {
+      "initial_temperature": 100.0,
+      "cooling_rate": 0.95
+    },
+    "50": {
+      "initial_temperature": 10.0,
+      "cooling_rate": 0.98
+    },
+    "100": {
+      "initial_temperature": 1.0,
+      "cooling_rate": 0.995
+    }
+  },
+  "stage2_by_size": {
+    "20": {
+      "enable_descent": true,
+      "allow_split": true
+    },
+    "50": {
+      "enable_descent": false,
+      "allow_split": true
+    },
+    "100": {
+      "enable_descent": false,
+      "allow_split": false
+    }
+  },
+  "notes": "基础与第一版参数沿用第二阶段开发集选择；新版在开发集选出一套跨规模参数。未用第三阶段新数据调参。"
+}
